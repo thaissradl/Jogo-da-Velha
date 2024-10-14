@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to top,
+    #ffcf33,
+    #ff4081
+  ); /* Degradê de amarelo retro para rosa choque */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  color: #1a237e; /* Azul marinho para o título */
+}
+
+hr {
+  width: 100%;
+  border: none;
+  height: 3px;
+  background-color: #1a237e; /* Rosa choque para a linha */
+  margin-bottom: 20px;
+}
+
+.currentPlayer {
+  font-size: 25px;
+  color: #d32f2f; /* Vermelho intenso para o jogador da vez */
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+
+.game button {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  background-color: #673ab7; /* Roxo escuro para as células */
+  color: white; /* Texto branco para contraste */
+  border: none; /* Remove bordas */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+}
+
+.game button:hover {
+  background-color: #5e35b1; /* Roxo escuro mais intenso no hover */
+  transform: scale(1.05); /* Efeito de aumento suave ao passar o mouse */
+}
+
+button:disabled {
+  background-color: #d1c4e9; /* Roxo suave para células desativadas */
+  color: #888; /* Texto cinza claro nas células desativadas */
+}
+
+#buttonReset {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #00bcd4; /* Azul neon para o botão de reinício */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#buttonReset:hover {
+  background-color: #00acc1; /* Azul neon mais escuro no hover */
+  transform: scale(1.05);
+}
+
+#buttonReset:active {
+  background-color: #0097a7; /* Azul ainda mais escuro ao clicar */
+  transform: scale(1);
+}
